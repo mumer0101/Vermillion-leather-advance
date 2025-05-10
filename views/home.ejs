@@ -1,563 +1,573 @@
 <!Doctype html>
 <html lang="en">
-  <head>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-    <link rel="manifest" href="img/icon/site.webmanifest">
-  
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="/img/icon/site.webmanifest">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Google Font  -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<style>
-        
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Raleway', 'sans-serif';
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
-section{
-  padding: 60px 0;
-  overflow: hidden;
-}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', 'sans-serif';
 
-/** Nv bar css ***/
-#navigation {
-  position: absolute;
-  top: 30px;
-  width: 100%;
-  transition: 0.5s all;
-  background: transparent; 
-}
+        }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
 
-/* Logo Styling */
-.logo .logo-img {
-  width: 150px;
-  margin-right: 40px;
-  height: auto;
-}
+        /** Nv bar css ***/
+        #navigation {
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            transition: 0.5s all;
+            background: transparent;
+        }
 
-/* Navigation Menu */
-#nav-menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-#nav-menu li {
-  margin-left: 20px;
-}
+        /* Logo Styling */
+        .logo .logo-img {
+            width: 150px;
+            margin-right: 40px;
+            height: auto;
+        }
 
-#nav-menu li a {
-  display: block;
-  position: relative;
-  color: #C19A6B;
-  padding: 18px 25px;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  transition: 0.5s all;
-  border-radius: 50px;
-}
+        /* Navigation Menu */
+        #nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-#nav-menu li a:hover {
-  color: #fff;
-  background-color: #6E260E;
-  padding: 10px 25px;
-}
+        #nav-menu li {
+            margin-left: 20px;
+        }
 
+        #nav-menu li a {
+            display: block;
+            position: relative;
+            color: #C19A6B;
+            padding: 18px 25px;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            transition: 0.5s all;
+            border-radius: 50px;
+        }
 
-/** Banner Section css ***/
-
-#hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/banner.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    text-align: center;
-}
-
-#hero .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px;
-}
-
-#hero h1 {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
-    color: #C19A6B;
-    text-transform: uppercase;
-    text-shadow: 0px 6px 15px rgba(0, 0, 0, 1);
-    margin-bottom: 20px;
-}
-
-#hero h2 {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 60px;
-    color: #C19A6B;
-    text-transform: uppercase;
-}
-
-.products h1 {
-    font-weight: 700;
-    color: #6E260E;
-    text-align: center;
-}
-
-h2 {
-    font-weight: 600;
-    color: #C19A6B;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-/** about us **/
-
-.about {
-  background-color: #f6f3ee;
-  max-width: 1400px;
-  margin: 0 auto; 
-  margin-top: 20px;
-  padding: 30px;
-}
-
-.about h1 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
-  margin-bottom: 20px;
-  color: #6E260E;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.about h1 span {
-  display: inline-block;
-  border-bottom: 4px solid #C19A6B;
-  width: 50px;
-}
-
-.about p {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  text-align: justify; 
-  margin-bottom: 15px;
-}
-
-/** Portfolio items **/
-
-.portfolio {
-    text-align: center;
-    padding: 20px;
-}
-
-.portfolio h2{
-  font-size: 35px;
-  margin-top: 30px;
-}
-
-.portfolio_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.portfolio_item {
-    width: 27%;
-}
-
-.portfolio_wrap {
-    position: relative;
-    overflow: hidden;
-    background-color: rgba(193, 154, 107, 1);
-    transition: 0.3s ease-in-out;
-    padding-bottom: 10px;
-    border-radius: 15px;
-}
-
-.portfolio_wrap img {
-    width: 100%;
-    display: block;
-    transition: 0.3s ease-in-out;
-}
-
-.portfolio_wrap:hover img {
-    transform: scale(1.2);
-}
-
-.portfolio_info h4 {
-    font-size: 20px;
-    color: #fff  ;
-    font-weight: 600;
-    margin-top: 5px;
-    text-align: center;
-}
-
-/** Award Section **/
-
-.award .container {
-    margin-top: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.award .row {
-    display: flex;
-    align-items: flex-start; 
-    justify-content: space-between;
-    gap: 50px; 
-}
-
-.award .content {
-    width: 50%;
-    padding: 20px;
-    text-align: left;
-    margin-bottom: 20px; 
-}
-
-.award .content h3 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #6E260E; 
-}
-
-.award .content p {
-    color: #000000;
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 500px;
-}
-
-.award .image-container {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.award .awardphoto {
-    border: 2px solid #6E260E;
-    max-width: 100%;
-    height: auto;
-    width: 480px;
-    border-radius: 25px; 
-}   
-
-/** footer Section css ***/
-
-#footer {
-    background-color: #642B1C;
-    font-size: 20px;
-    color: #C19A6B;
-    padding: 40px 0;
-    text-align: left;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer_content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 250px;
-}
-
-.footer_contact {
-    min-width: 300px;
-}
-
-.footer_links {
-    min-width: 250px;
-    padding-left: 40px;
-}
-
-.footer_contact h3, .footer_links h4 {
-    color: #C19A6B;
-    font-weight: 700;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.footer_contact p {
-    color: #fff;
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.footer_links ol {
-    list-style: none;
-    padding: 0;
-}
-
-.footer_links ol li {
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-.footer_links ol li{
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-.footer_links ol li a{
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer_bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin-top: 70px;
-}
-
-.footer_contact span{
-  font-weight: bold;
-}
-
-.footer_bottom{
-  color: #C19A6B;
-}
-
-.icons{
-  font-size: 40px;
-  display: flex;
-  gap: 50px;
-  padding: 10px;
-  justify-content: center;
-  margin-top: 40px;
-  
-}
-
-.icons a{
-  color: #C19A6B;
-}
-
-.icons a:hover{
-  transition: 0.3s;
-  color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-}
-</style>
-   
-<title>Vermillion Leather & Co.</title>
-
-  </head>
-  <body>
-     
-
-<!-- Navigation Bar -->
-  <nav id="navigation">
-    <div class="container">
-      <div class="logo">
-        <a href="home.html"><img src="img/logo1.png" alt="Logo" class="logo-img"></a>
-      </div>
-   
-    <ul id="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="product.html">Our Products</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  
-    </div>
-  </nav>
-<!-- nv bar  -->
+        #nav-menu li a:hover {
+            color: #fff;
+            background-color: #6E260E;
+            padding: 10px 25px;
+        }
 
 
-<!-- Banner section  -->
-        <section id="hero">
-          <div class="container">
-          <h1>Vermillion Leather & Co.</h1>
-          <h2>Premium Handmade Leather Products</h2>
-          </div>
-        </section>
-<!-- Banner section end -->      
+        /** Banner Section css ***/
 
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/banner.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+        }
 
-<!-- About us section  -->
-        <section class="about">
-          <div class="container">
+        #hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+
+        #hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            color: #C19A6B;
+            text-transform: uppercase;
+            text-shadow: 0px 6px 15px rgba(0, 0, 0, 1);
+            margin-bottom: 20px;
+        }
+
+        #hero h2 {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 60px;
+            color: #C19A6B;
+            text-transform: uppercase;
+        }
+
+        .products h1 {
+            font-weight: 700;
+            color: #6E260E;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #C19A6B;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /** about us **/
+
+        .about {
+            background-color: #f6f3ee;
+            max-width: 1400px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 30px;
+        }
+
+        .about h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 60px;
+            margin-bottom: 20px;
+            color: #6E260E;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .about h1 span {
+            display: inline-block;
+            border-bottom: 4px solid #C19A6B;
+            width: 50px;
+        }
+
+        .about p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /** Portfolio items **/
+
+        .portfolio {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .portfolio h2 {
+            font-size: 35px;
+            margin-top: 30px;
+        }
+
+        .portfolio_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .portfolio_item {
+            width: 27%;
+        }
+
+        .portfolio_wrap {
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(193, 154, 107, 1);
+            transition: 0.3s ease-in-out;
+            padding-bottom: 10px;
+            border-radius: 15px;
+        }
+
+        .portfolio_wrap img {
+            width: 100%;
+            display: block;
+            transition: 0.3s ease-in-out;
+        }
+
+        .portfolio_wrap:hover img {
+            transform: scale(1.2);
+        }
+
+        .portfolio_info h4 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        /** Award Section **/
+
+        .award .container {
+            margin-top: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .award .row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .award .content {
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .award .content h3 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #6E260E;
+        }
+
+        .award .content p {
+            color: #000000;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .award .image-container {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .award .awardphoto {
+            border: 2px solid #6E260E;
+            max-width: 100%;
+            height: auto;
+            width: 480px;
+            border-radius: 25px;
+        }
+
+        /** footer Section css ***/
+
+        #footer {
+            background-color: #642B1C;
+            font-size: 20px;
+            color: #C19A6B;
+            padding: 40px 0;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer_content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 250px;
+        }
+
+        .footer_contact {
+            min-width: 300px;
+        }
+
+        .footer_links {
+            min-width: 250px;
+            padding-left: 40px;
+        }
+
+        .footer_contact h3,
+        .footer_links h4 {
+            color: #C19A6B;
+            font-weight: 700;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .footer_contact p {
+            color: #fff;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .footer_links ol {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer_links ol li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .footer_links ol li {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .footer_links ol li a {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .footer_bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            margin-top: 70px;
+        }
+
+        .footer_contact span {
+            font-weight: bold;
+        }
+
+        .footer_bottom {
+            color: #C19A6B;
+        }
+
+        .icons {
+            font-size: 40px;
+            display: flex;
+            gap: 50px;
+            padding: 10px;
+            justify-content: center;
+            margin-top: 40px;
+
+        }
+
+        .icons a {
+            color: #C19A6B;
+        }
+
+        .icons a:hover {
+            transition: 0.3s;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <title>Vermillion Leather & Co.</title>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navigation">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="/img/logo1.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Our Products</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/collection">Favorites</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nv bar  -->
+
+    <!-- Banner section  -->
+    <section id="hero">
+        <div class="container">
+            <h1>Vermillion Leather & Co.</h1>
+            <h2>Premium Handmade Leather Products</h2>
+        </div>
+    </section>
+    <!-- Banner section end -->
+
+    <!-- About us section  -->
+    <section class="about">
+        <div class="container">
             <div class="content">
-              
                 <h1><span>About Us</span></h1>
-                 <p>At Vermillion Leather & Co., we take pride in crafting timeless leather goods that embody elegance, durability, and unmatched craftsmanship. Every piece we create is a testament to our dedication to quality, using only the finest full-grain leather sourced from the most reputable and ethical tanneries. Our artisans, with years of expertise, meticulously handcraft each product, ensuring precision in every stitch and cut. We believe in blending traditional leatherworking techniques with modern aesthetics, offering pieces that are both stylish and built to last.</p>
-                 <p>Our commitment goes beyond just creating leather goods—we are passionate about sustainability and responsible sourcing. Our leather is carefully selected from tanneries that uphold eco-friendly practices, ensuring minimal environmental impact while maintaining the highest quality. From wallets and belts to luxury bags and accessories, our collection is designed to age gracefully, developing a rich patina that tells a story over time. At Vermillion Leather & Co., we don’t just sell leather products—we craft lifelong companions.</p>
+                <p>At Vermillion Leather & Co., we take pride in crafting timeless leather goods that embody elegance,
+                    durability, and unmatched craftsmanship. Every piece we create is a testament to our dedication to
+                    quality, using only the finest full-grain leather sourced from the most reputable and ethical
+                    tanneries. Our artisans, with years of expertise, meticulously handcraft each product, ensuring
+                    precision in every stitch and cut. We believe in blending traditional leatherworking techniques with
+                    modern aesthetics, offering pieces that are both stylish and built to last.</p>
+                <p>Our commitment goes beyond just creating leather goods—we are passionate about sustainability and
+                    responsible sourcing. Our leather is carefully selected from tanneries that uphold eco-friendly
+                    practices, ensuring minimal environmental impact while maintaining the highest quality. From wallets
+                    and belts to luxury bags and accessories, our collection is designed to age gracefully, developing a
+                    rich patina that tells a story over time. At Vermillion Leather & Co., we don’t just sell leather
+                    products—we craft lifelong companions.</p>
+            </div>
+        </div>
+    </section>
+    <!-- About us section end  -->
+
+    <!-- Products section  -->
+    <section class="portfolio">
+        <div>
+            <h2>Explore Our Categories</h2>
+        </div>
+        <div class="portfolio_container">
+            <div class="portfolio_item">
+                <div class="portfolio_wrap">
+                    <a href="/products"><img src="/img/1.jpg" alt="Jackets"></a>
+                    <div class="portfolio_info">
+                        <h4>Jackets</h4>
+                    </div>
                 </div>
             </div>
+            <div class="portfolio_item">
+                <div class="portfolio_wrap">
+                    <a href="/products"><img src="/img/2.jpg" alt="Wallets"></a>
+                    <div class="portfolio_info">
+                        <h4>Wallets</h4>
+                    </div>
+                </div>
             </div>
-          </div>
-        </section>       
-<!-- About us section end  --> 
-
-
-<!-- Products section  -->    
-      <section class="portfolio">
-    <div>
-        <h2>Explore Our Categories</h2>
-    </div>
-    <div class="portfolio_container">
-        <div class="portfolio_item">
-            <div class="portfolio_wrap">
-                <a href="products.html"><img src="img/1.jpg" alt="Jackets"></a>
-                <div class="portfolio_info">
-                    <h4>Jackets</h4>
+            <div class="portfolio_item">
+                <div class="portfolio_wrap">
+                    <a href="/products"><img src="/img/3.jpg" alt="Belts"></a>
+                    <div class="portfolio_info">
+                        <h4>Belts</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio_item">
+                <div class="portfolio_wrap">
+                    <a href="/products"><img src="/img/4.jpg" alt="Bags"></a>
+                    <div class="portfolio_info">
+                        <h4>Bags</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio_item">
+                <div class="portfolio_wrap">
+                    <a href="/products"><img src="/img/5.jpg" alt="Purses"></a>
+                    <div class="portfolio_info">
+                        <h4>Purses</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio_item">
+                <div class="portfolio_wrap">
+                    <a href="/products"><img src="/img/6.jpg" alt="Accessories"></a>
+                    <div class="portfolio_info">
+                        <h4>Accessories</h4>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio_item">
-            <div class="portfolio_wrap">
-                <a href="products.html"><img src="img/2.jpg" alt="Wallets"></a>
-                <div class="portfolio_info">
-                    <h4>Wallets</h4>
+    </section>
+    <!-- Products section end -->
+
+    <!-- Our Achievements Section -->
+    <section class="award">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <h3>Our Achievements</h3>
+                    <p>
+                        Our company takes great pride in receiving the prestigious award for excellence in leather
+                        craftsmanship. This accolade underscores our unwavering commitment to producing the finest
+                        quality leather products. It is a testament to our dedication to precision, innovation, and the
+                        timeless artistry that defines our brand.
+                    </p>
+                </div>
+                <div class="image-container">
+                    <img src="/img/reward.jpg" class="awardphoto" alt="image">
                 </div>
             </div>
         </div>
-        <div class="portfolio_item">
-            <div class="portfolio_wrap">
-                <a href="products.html"><img src="img/3.jpg" alt="Belts"></a>
-                <div class="portfolio_info">
-                    <h4>Belts</h4>
+    </section>
+    <!-- Our Achievements Section end -->
+
+    <!-- footer section  -->
+    <footer id="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="footer_content">
+                    <div class="footer_contact">
+                        <h3>Vermillion Leather & Co.</h3>
+                        <p>1750 Finch Ave E,<br>North York, Ontario<br>M2J 2X5</p>
+                        <p><span>Phone:</span> +1 (XXX) XXX - XXXX</p>
+                        <p><span>Email:</span> info@vermillionleather.com</p>
+                    </div>
+
+                    <div class="footer_links">
+                        <h4>Useful Links</h4>
+                        <ol>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/products">Our Products</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio_item">
-            <div class="portfolio_wrap">
-                <a href="products.html"><img src="img/4.jpg" alt="Bags"></a>
-                <div class="portfolio_info">
-                    <h4>Bags</h4>
-                </div>
-            </div>
+
+        <div class="footer_bottom">
+            <p><i class="bi bi-c-circle"></i> Copyright <span>Vermillion Leather & Co.</span>
+                All Rights Reserved</p>
         </div>
-        <div class="portfolio_item">
-            <div class="portfolio_wrap">
-                <a href="products.html"><img src="img/5.jpg" alt="Purses"></a>
-                <div class="portfolio_info">
-                    <h4>Purses</h4>
-                </div>
-            </div>
+
+        <div class="icons">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
         </div>
-        <div class="portfolio_item">
-            <div class="portfolio_wrap">
-                <a href="products.html"><img src="img/6.jpg" alt="Accessories"></a>
-                <div class="portfolio_info">
-                    <h4>Accessories</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Products section end -->
+    </footer>
+    <!-- Footer section end -->
 
+</body>
 
-<!-- Our Achievements Section -->
-<section class="award">
-    <div class="container">
-        <div class="row">
-            <div class="content">
-                <h3>Our Achievements</h3>
-                <p>
-                    Our company takes great pride in receiving the prestigious award for excellence in leather craftsmanship. This accolade underscores our unwavering commitment to producing the finest quality leather products. It is a testament to our dedication to precision, innovation, and the timeless artistry that defines our brand.
-                </p>
-            </div>
-            <div class="image-container">
-                <img src="img/reward.jpg" class="awardphoto" alt="image">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Our Achievements Section end -->
-
-
-<!-- footer section  -->
-<footer id="footer">
-  <div class="footer_top">
-    <div class="container">
-      <div class="footer_content">
-        <div class="footer_contact">
-          <h3>Vermillion Leather & Co.</h3>
-          <p>1750 Finch Ave E,</p> 
-           <p>North York, Ontario</p>
-           <p>M2J 2X5</p>
-           <p><span>Phone:</span> +1 (XXX) XXX - XXXX</p> 
-           <p> <span>Email:</span> info @vermillionleather.com </p>
-          </p>
-        </div>
-       
-        <div class="footer_links">
-          <h4>Useful Links</h4>
-          <ol>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="home.html">About Us</a></li>
-            <li><a href="product.html">Our Products</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer_bottom">
-    <p><i class="bi bi-c-circle"></i> Copyright <span>Vermillion Leather & Co.</span> All Rights Reserved</p>
-    
-  </div>
-  </div>
-      <div class="icons">
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-twitter-x"></i></a>
-        <a href="#"><i class="bi bi-pinterest"></i></a>
-        <a href="#"><i class="bi bi-whatsapp"></i></a>
-      </div>
-</footer>
-
-<!-- Footer section end -->
-
-  </body>
 </html>
