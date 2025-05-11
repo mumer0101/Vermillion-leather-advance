@@ -182,3 +182,49 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+// Collection array (favorites)
+const COLLECTION = [];
+
+// HOME PAGE (Landing)
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
+// PRODUCTS PAGE (View all + Add/Update)
+app.get("/products", (req, res) => {
+  res.render("products", { myList: PRODUCTS });
+});
+
+// CONTACT PAGE
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
+// ADD TO COLLECTION (favorites)
+app.get("/add/:index", (req, res) => {
+  const index = parseInt(req.params.index);
+  if (!isNaN(index) && index >= 0 && index < PRODUCTS.length) {
+    COLLECTION.push(PRODUCTS[index]);
+    return res.send(`<h2>Item added to your collection! <a href="/products">Back to Products</a></h2>`);
+  } else {
+    return res.send("Invalid product index.");
+  }
+});
+
+// VIEW COLLECTION
+app.get("/collection", (req, res) => {
+  res.render("collection", { myList: COLLECTION });
+});
+
+// REMOVE FROM COLLECTION
+app.get("/remove/:index", (req, res) => {
+  const index = parseInt(req.params.index);
+  if (!isNaN(index) && index >= 0 && index < COLLECTION.length) {
+    COLLECTION.splice(index, 1);
+    return res.redirect("/collection");
+  } else {
+    return res.send("Invalid index.");
+  }
+});
+
