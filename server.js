@@ -1,8 +1,168 @@
-const express = require('express');
-const path = require('path');
-
+const express = require("express");
 const app = express();
-const PORT = 3000;
+const port = 3000;
+
+// Setup EJS and static folder
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+
+// PRODUCT DATA
+const PRODUCTS = [
+  {
+    id: 1,
+    name: "Classic Black Jacket",
+    material: "Cowhide",
+    image: "img/products/1.webp",
+    price: "$180",
+    description: "A timeless staple crafted from premium black leather.",
+    isAvailable: true
+  },
+  {
+    id: 2,
+    name: "Vintage Brown Zipper",
+    material: "Cowhide",
+    image: "img/products/3.webp",
+    price: "$165",
+    description: "Rich, premium brown leather jacket with a touch of rugged elegance.",
+    isAvailable: true
+  },
+  {
+    id: 3,
+    name: "Classic Brown Jacket",
+    material: "Cowhide",
+    image: "img/products/2.webp",
+    price: "$170",
+    description: "A timeless staple brown leather jacket, versatile for any season.",
+    isAvailable: false
+  },
+  {
+    id: 4,
+    name: "Sleek Black Wallet",
+    material: "Buffalo Leather",
+    image: "img/products/5.webp",
+    price: "$40",
+    description: "Premium black leather wallet for everyday elegance.",
+    isAvailable: true
+  },
+  {
+    id: 5,
+    name: "Classic Brown Wallet",
+    material: "Full-grain",
+    image: "img/products/6.webp",
+    price: "$45",
+    description: "Timeless brown wallet blending function and style.",
+    isAvailable: false
+  },
+  {
+    id: 6,
+    name: "Classic Black Belt",
+    material: "Cowhide",
+    image: "img/products/7.webp",
+    price: "$ 35",
+    description: "A versatile essential, this sleek black leather belt adds a touch of sophistication to any outfit.",
+    isAvailable: true
+  },
+  {
+    id: 7,
+    name: "Timeless Brown Belt",
+    material: "Full-grain",
+    image: "img/products/8.webp",
+    price: "$ 40",
+    description: "A must-have accessory, this rich brown leather belt exudes classic charm and durability.",
+    isAvailable: false
+  },
+  {
+    id: 8,
+    name: "Black Crocodile Belt",
+    material: "Crocodile Leather",
+    image: "img/products/9.webp",
+    price: "$ 60",
+    description: "Bold and luxurious, this black crocodile leather belt makes a strong statement of elegance and exclusivity.",
+    isAvailable: true
+  },
+  {
+    id: 9,
+    name: "Travel Bag",
+    material: "Cowhide",
+    image: "img/products/10.webp",
+    price: "$ 120",
+    description: "Rugged yet refined, this brown leather travel bag is built for adventure and daily use.",
+    isAvailable: true
+  },
+  {
+    id: 10,
+    name: "Black Office Bag",
+    material: "Buffalo Leather",
+    image: "img/products/11.webp",
+    price: "$ 135",
+    description: "Sleek and professional, this black leather office bag is designed for the modern gentleman.",
+    isAvailable: false
+  },
+  {
+    id: 11,
+    name: "Brown Office Bag",
+    material: "Cowhide",
+    image: "img/products/12.webp",
+    price: "$ 130",
+    description: "Classic and sophisticated, this brown leather office bag blends elegance with functionality.",
+    isAvailable: true
+  },
+  {
+    id: 12,
+    name: "Elegant Handbag",
+    material: "Full-grain",
+    image: "img/products/13.webp",
+    price: "$ 85",
+    description: "This brown leather handbag features intricate buckle details and a structured silhouette.",
+    isAvailable: true
+  },
+  {
+    id: 13,
+    name: "Classic Women Wallet",
+    material: "Cowhide",
+    image: "img/products/14.webp",
+    price: "$ 50",
+    description: "Compact yet stylish, crafted with precision stitching and built for durability and elegance.",
+    isAvailable: true
+  },
+  {
+    id: 14,
+    name: "Vintage Satchel",
+    material: "Cowhide",
+    image: "img/products/15.webp",
+    price: "$ 95",
+    description: "With a timeless design and premium leather, this satchel is perfect for any occasion.",
+    isAvailable: false
+  },
+  {
+    id: 15,
+    name: "Custom Airpod Covers",
+    material: "Buffalo Leather",
+    image: "img/products/16.webp",
+    price: "$ 30",
+    description: "Protect your AirPods in style with this handcrafted leather cover designed for elegance and durability.",
+    isAvailable: false
+  },
+  {
+    id: 16,
+    name: "Luxury Accessories Collection",
+    material: "Cowhide",
+    image: "img/products/17.jpg",
+    price: "$ 60",
+    description: "Includes mobile covers and glasses cases crafted from premium leather for daily use.",
+    isAvailable: true
+  },
+  {
+    id: 17,
+    name: "Classic Watch Straps",
+    material: "Full-grain",
+    image: "img/products/18.webp",
+    price: "$ 25",
+    description: "Upgrade your timepiece with this premium strap crafted for comfort and timeless appeal.",
+    isAvailable: true
+  }
+];
 
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
