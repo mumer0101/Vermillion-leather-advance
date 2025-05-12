@@ -242,3 +242,22 @@ app.get("/find/:query", (req, res) => {
 
   return res.render("products", { myList: results });
 });
+
+// ADD NEW PRODUCT
+app.post("/add-item", (req, res) => {
+  const { name, material, price, image, description } = req.body;
+  const id = PRODUCTS.length + 1;
+
+  const newItem = {
+    id,
+    name,
+    material,
+    price,
+    image,
+    description,
+    isAvailable: true
+  };
+
+  PRODUCTS.push(newItem);
+  res.redirect("/products");
+});
