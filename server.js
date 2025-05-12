@@ -261,3 +261,32 @@ app.post("/add-item", (req, res) => {
   PRODUCTS.push(newItem);
   res.redirect("/products");
 });
+
+
+// UPDATE isAvailable STATUS
+app.post("/update-item/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const isAvailable = req.body.isAvailable === "on";
+
+  for (let i = 0; i < PRODUCTS.length; i++) {
+    if (PRODUCTS[i].id === id) {
+      PRODUCTS[i].isAvailable = isAvailable;
+      break;
+    }
+  }
+
+  res.redirect("/products");
+});
+
+// FILTERED ITEMS PAGE
+app.get("/filtered-items", (req, res) => {
+  const filtered = [];
+  for (let i = 0; i < PRODUCTS.length; i++) {
+    if (PRODUCTS[i].isAvailable === true) {
+      filtered.push(PRODUCTS[i]);
+    }
+  }
+
+  res.render("products", { myList: filtered });
+});
+
