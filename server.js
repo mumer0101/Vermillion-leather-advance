@@ -228,3 +228,17 @@ app.get("/remove/:index", (req, res) => {
   }
 });
 
+// FILTER BY MATERIAL (used in Find Similar)
+app.get("/find/:query", (req, res) => {
+  const keyword = req.params.query.toLowerCase();
+  const results = [];
+
+  for (let i = 0; i < PRODUCTS.length; i++) {
+    const material = PRODUCTS[i].material.toLowerCase();
+    if (material === keyword) {
+      results.push(PRODUCTS[i]);
+    }
+  }
+
+  return res.render("products", { myList: results });
+});
