@@ -290,3 +290,7 @@ app.get("/filtered-items", (req, res) => {
   res.render("products", { myList: filtered });
 });
 
+// START SERVER
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
